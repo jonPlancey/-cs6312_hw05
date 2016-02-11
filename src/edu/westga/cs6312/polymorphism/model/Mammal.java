@@ -19,6 +19,6 @@ public abstract class Mammal extends Animal {
 	 *                covered with covering
 	 */ 
 	public Mammal(String animalkind) {
-		super(animalkind, "hair");
+		super(animalkind, "fur");
 	}
 }

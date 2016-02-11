@@ -64,8 +64,8 @@ public abstract class Animal {
 	 */ 
 	public String getMovement(Boolean trueFalse) {
 		String output = "";
-		String ifFalse = "I walk on four legs";
-		String ifTrue = "I run on fourlegs";
+		String ifFalse = "I walk on 4 legs";
+		String ifTrue = "I run on 4 legs";
 		
 		if (trueFalse == null) {
 			throw new IllegalArgumentException("Invalid value, expect boolean");
