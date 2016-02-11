@@ -34,6 +34,27 @@ public abstract class Animal {
 		this.covering = animalCovering; 	
 	} 
 	
+	
+
+
+	/** 
+	 * Returns animal to be created as an object
+	 * @param animalkind  The kind of animal being created 
+	 * @return returns an object from the corresponding Animal subclass.
+	 *  
+	 * Precondition: kind != null 
+	 * Postcondition: Animal of whose type is kind & covered with covering
+	 */ 	
+	public static String getNewAnimal(String animalkind) {
+		if (animalkind == null) {
+			throw new IllegalArgumentException("Invalid kind");
+		}
+		return animalkind;
+		
+	}; 
+	
+	
+	
 	/** 
 	 * determin how fast animal is moving
 	 * @param trueFalse 		Animal is moving fast or not.
@@ -58,25 +79,7 @@ public abstract class Animal {
 		}
 		return output;
 	}
-	
-	
 
-
-	/** 
-	 * Returns animal to be created as an object
-	 * @param animalkind  The kind of animal being created 
-	 * @return returns an object from the corresponding Animal subclass.
-	 *  
-	 * Precondition: kind != null 
-	 * Postcondition: Animal of whose type is kind & covered with covering
-	 */ 	
-	public static Animal getNewAnimal(String animalkind) {
-		if (animalkind == null) {
-			throw new IllegalArgumentException("Invalid kind");
-		}
-		return animalkind;
-		
-	}; 
 	
 	
 	
@@ -123,7 +126,7 @@ public abstract class Animal {
 	 * Gets animals covering
 	 * @return the covering of the animal
 	 */
-	public String getcovering() {	
+	public String getCovering() {	
 		return this.covering;
 	}
 	
