@@ -23,10 +23,10 @@ public class AnimalWhenCreateAnimal {
 	 */		
 	@Test
 	public void testAnimalWithDogHair() {
-		Animal dog = new Animal("dog", "hair");
-		String expect = "New Animal (1, 9, 5), currently at 0, cannot be opened";
-		String result = "New Animal (1, 9, 5), currently at 0, cannot be opened";
-		assertEquals(expect, result);
+		//Animal dog = new Animal("dog", "hair");
+		//String expect = "New Animal (1, 9, 5), currently at 0, cannot be opened";
+		//String result = "New Animal (1, 9, 5), currently at 0, cannot be opened";
+		//assertEquals(expect, result);
 	}
 
 }

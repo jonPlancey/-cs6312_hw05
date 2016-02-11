@@ -34,5 +34,29 @@ public abstract class Animal {
 		this.covering = animalCovering; 	
 	} 
 	
+	/** 
+	 * 2 parameter constructor to create an Animal object 
+	 * @param trueFalse 		Animal is moving fast or not.
+	 * @return string describing how fast animal moves.
+	 *  
+	 * Precondition: trueFalse != null 
+	 * Postcondition: boolean value of true\false and return discriptive string
+	 */ 
+	public String getMovement(Boolean trueFalse) {
+		String output = "";
+		String ifFalse = "I walk on four legs";
+		String ifTrue = "I run on fourlegs";
+		
+		if (trueFalse == null) {
+			throw new IllegalArgumentException("Invalid value, expect boolean");
+		}
 
+		if (trueFalse) {
+			output = ifTrue;
+		} else {
+			output = ifFalse;
+		}
+		return output;
+	}
+	
 }
