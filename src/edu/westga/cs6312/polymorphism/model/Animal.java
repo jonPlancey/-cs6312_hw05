@@ -18,10 +18,9 @@ public abstract class Animal {
 	 * @param animalkind 		The kind of animal being created 
 	 * @param animalCovering 	The animal's covering type 
 	 * 
-	 * Precondition: kind != null 
- 	 * covering:	 != null 
+	 * Precondition: animalkind != null, animalCovering!= null  
 	 * Postcondition: An animal of whose type is kind and is
-	 * covered with covering
+	 *                covered with covering
 	 */ 
 	public Animal(String animalkind, String animalCovering) {
 		if (animalkind == null) {
