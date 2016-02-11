@@ -44,12 +44,24 @@ public abstract class Animal {
 	 * Precondition: kind != null 
 	 * Postcondition: Animal of whose type is kind & covered with covering
 	 */ 	
-	public static String getNewAnimal(String animalkind) {
+	public static String getNewAnimal(String animalkind) {		
 		if (animalkind == null) {
 			throw new IllegalArgumentException("Invalid kind");
 		}
-		return null;
 		
+		String animal = animalkind.toLowerCase();
+		
+		if (animal.equals("eagle")) {
+			return "eagle";
+		} else if (animal.equals("crow")) {
+			return "crow";
+		} else if (animal.equals("cat")) {
+			return "cat";
+		} else if (animal.equals("dog")) {			
+			return "dog";
+		} else {
+			return null;
+		}		
 	}; 
 	
 	
