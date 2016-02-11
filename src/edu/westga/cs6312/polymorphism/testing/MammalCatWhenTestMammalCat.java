@@ -19,7 +19,7 @@ public class MammalCatWhenTestMammalCat {
 	 * Test that animal is properly created
 	 */		
 	@Test
-	public void  birdCrowWhenTestMammalCat() {
+	public void mammalCatWhenTestMammalCat() {
 		MammalCat cat = new MammalCat();
 		String expect = "Animal kind: cat, covering: fur"; 
 		String results = cat.toString();
@@ -30,7 +30,7 @@ public class MammalCatWhenTestMammalCat {
 	 * Test that toString works properly
 	 */	
 	@Test
-	public void birdCrowWhenTestMammalCatToString() {
+	public void mammalCatWhenTestMammalCatToString() {
 		MammalCat cat = new MammalCat();
 		String expect = "Animal kind: cat, covering: fur"; 
 		String results = cat.toString();
@@ -41,7 +41,7 @@ public class MammalCatWhenTestMammalCat {
 	 * Test if correct sound is returned
 	 */	
 	@Test
-	public void birdCrowWhenTestMammalCatGetSound() {
+	public void mammalCatWhenTestMammalCatGetSound() {
 		MammalCat cat = new MammalCat();
 		String expect = "meow"; 
 		String results = cat.getSound();
@@ -53,7 +53,7 @@ public class MammalCatWhenTestMammalCat {
 	 * Test if proper movement is returned
 	 */		
 	@Test
-	public void birdCrowWhenTestMammalCatGetMovement() {
+	public void mammalCatWhenTestMammalCatGetMovement() {
 		MammalCat cat = new MammalCat();
 		String expect = "I run on 4 legs"; 
 		String results = cat.getMovement(true);
@@ -66,7 +66,7 @@ public class MammalCatWhenTestMammalCat {
 	 * getKind, getCovering return proper values
 	 */		
 	@Test
-	public void  birdCrowWhenTestGetKindGetCovering() {
+	public void mammalCatWhenTestGetKindGetCovering() {
 		MammalCat cat = new MammalCat();
 		String expect = "Animal kind: " + cat.getKind()  + ", covering: " + cat.getCovering(); 
 		String results = cat.toString();
