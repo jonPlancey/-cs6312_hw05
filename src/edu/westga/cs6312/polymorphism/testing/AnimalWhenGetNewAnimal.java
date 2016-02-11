@@ -21,8 +21,10 @@ public class AnimalWhenGetNewAnimal {
 	@Test
 	//testBallWithColorYellow
 	public void testAnimalWhenGetNewAnimalEagle() {	
-		BirdEagle eagle = new BirdEagle();		
-		String expect = BirdEagle.getNewAnimal("eagle");
+		BirdEagle eagle = new BirdEagle();
+		String animal = BirdEagle.getNewAnimal("eagle");
+		
+		String expect = "Animal kind: " + animal + ", covering: feathers"; 
 		String results = eagle.toString();
 		assertEquals(expect, results);
 	}
