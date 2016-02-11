@@ -9,6 +9,7 @@ package edu.westga.cs6312.polymorphism.model;
  * @version	02.10.2016
  */
 public class BirdCrow extends Bird {
+	
 	/** 
 	 * constructor to create an BirdCrow object 
 	 * 
