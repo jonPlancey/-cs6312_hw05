@@ -82,6 +82,12 @@ public abstract class Animal {
 
 	
 	/** 
+	 * Gets the sound the animal makes
+	 * @return returns sound of animal
+	 */ 	
+	public abstract String getSound(); 
+	
+	/** 
 	 * Generates string describing animal object.
 	 * @return return a String representation of animal object
 	 */ 	
