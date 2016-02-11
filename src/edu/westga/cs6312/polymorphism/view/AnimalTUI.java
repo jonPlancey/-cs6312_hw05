@@ -35,19 +35,17 @@ public class AnimalTUI {
 	 * controls program flow 
 	 **/
 	public void run() {
-		int userchoice = 0;		
+		int userchoice = 0;	
+		
 		this.displayMenu();
+		this.displayMenuInput(userchoice);		
 		
 		while (!(userchoice > 0 && userchoice < 3)) {
-			try {
-				userchoice = Integer.parseInt(this.userKeyboard.nextLine());
-			} catch (NumberFormatException error) {
-				System.out.println("Sorry: [ " + this.getErrorString(error) + " ] is not valid. Enter a number between 1 and 3. \n");
-			}			
+			this.displayMenuInput(userchoice);
         }
-		this.selectionCategories(userchoice);
-		
 	}	
+	
+	
 	
 	/**
 	 * Displays the following numbered 
@@ -58,7 +56,22 @@ public class AnimalTUI {
 		System.out.println("1 - Add an animal to the list");
 		System.out.println("2 - Print the animals in the list"); 
 		System.out.println("3 – Quit\n");	
+	}
+	
+	/**
+	 * main menu options
+	 * prompt user to select 1-6
+	 * @param userChoice users menu selection
+	 **/
+	public void displayMenuInput(int userChoice) {			
+		try {
+			userChoice = Integer.parseInt(this.userKeyboard.nextLine());
+		} catch (NumberFormatException error) {
+			System.out.println("Sorry: [ " + this.getErrorString(error) + " ] is not valid. Enter a number between 1 and 3. \n");
+		}
+		this.selectionCategories(userChoice);
 	}	
+	
 	
 	
 	/**
@@ -78,10 +91,12 @@ public class AnimalTUI {
 			case 1:	
 				System.out.println("\n    [1 Add a animal]");	   
 	    		this.addAnimal();
+	    		this.displayMenu();
+	    		this.displayMenuInput(userchoice);	
 				break;
 	        case 2: 
 	        	System.out.println("\n*   [2 Display list of animals]");
-	        	//this.displayAnimals();
+	        	this.displayAnimals();
 	            break;
 	        case 3: 
 	        	System.out.println("\n    [3 Quit]");
@@ -95,32 +110,77 @@ public class AnimalTUI {
 		}	
 	}	
 
+	/**
+	 * Display list of animals
+	 **/
+	public void displayAnimals() {	
+		String result = "";
+		
+		for (Animal currentAnimal : this.animals) {
+			result += "    " + currentAnimal.toString();
+		}	
+		System.out.println(result);
+	}
+	
 	
 	/**
 	 * prompts and captures input to add animal to animal collection
 	 **/	
 	public void addAnimal() {
 		String name = "";
+/*
+		BirdEagle birdEagle = new BirdEagle();
+		BirdCrow birdCrow = new BirdCrow();
+		MammalCat mammalCat = new MammalCat();
+		MammalDog mamalDog = new MammalDog();
+	
+		String eagle = BirdEagle.getNewAnimal("eagle");
+		String crow = BirdCrow.getNewAnimal("crow");	
+		String cat = MammalCat.getNewAnimal("cat");
+		String dog = MammalDog.getNewAnimal("dog");	
+		
+		
+		while (!name.equals("eagle")) {
+			System.out.print("That's not a valid animal type: ");		
 
-		BirdEagle eagle = new BirdEagle();
-		String animal = BirdEagle.getNewAnimal("eagle");
-		
-		BirdCrow crow = new BirdCrow();
-		String animal = BirdEagle.getNewAnimal("crow");	
-		
-		MammalCat cat = new MammalCat();
-		String animal = BirdEagle.getNewAnimal("cat");	
-		
-		MammalDog dog = new MammalDog();
-		String animal = BirdEagle.getNewAnimal("dog");		
+        }		
+			*/
 		
 		while (name.equals("")) {
 			System.out.print("What kind of animal would you like: ");
 			name = this.userKeyboard.nextLine();
-        }		
+        }
+		
+		if (!name.equals("eagle") || !name.equals("crow") || !name.equals("cat") || !name.equals("dog")) {
+			System.out.print("That's not a valid animal type: ");
+		} 
+		
+		
+		
+		//String animal = BirdEagle.getNewAnimal("eagle");
+		
+		
+		if (name.equals("eagle")) {
+			BirdEagle eagle = new BirdEagle();		
+			this.animals.add(eagle);
+		}
+		if (name.equals("crow")) {
+			BirdCrow birdCrow = new BirdCrow();	
+			this.animals.add(birdCrow);
+		}
+		if (name.equals("cat")) {
+			MammalCat mammalCat = new MammalCat();		
+			this.animals.add(mammalCat);
+		}
+		if (name.equals("dog")) {
+			MammalDog mamalDog = new MammalDog();		
+			this.animals.add(mamalDog);
+		}		
+		
+		
 
-		//Animal animal = new Animal();
-		//animal = Animal.getNewAnimal("eagle");
+		
+
 		
 		//Student student = new Student(firstName, lastName, grade);	
 		//this.studentRoster.addStudent(student);
