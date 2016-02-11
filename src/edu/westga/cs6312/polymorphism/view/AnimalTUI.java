@@ -39,7 +39,7 @@ public class AnimalTUI {
 		
 		this.displayMenu();		
 		
-		while (!(userchoice > 0 && userchoice < 2)) {
+		while (!(userchoice > 0 && userchoice < 1)) {
 			this.displayMenuInput(userchoice);
         }
 	}	
@@ -59,7 +59,7 @@ public class AnimalTUI {
 	
 	/**
 	 * main menu options
-	 * prompt user to select 1-6
+	 * prompt user to select 1-3
 	 * @param userChoice users menu selection
 	 **/
 	public void displayMenuInput(int userChoice) {			
@@ -94,7 +94,8 @@ public class AnimalTUI {
 	        	System.out.println("    We hope you enjoyed this program.\n\n");
 	            break;
 	        default: 
-	        	System.out.print("Not valid input. \n");
+	        	System.out.print("Not valid input. \n\n");
+	        	this.displayMenu();
 	        	break;		
 		}	
 	}	
@@ -122,7 +123,11 @@ public class AnimalTUI {
 			System.out.print("What kind of animal would you like: ");
 			name = this.userKeyboard.nextLine();
         }
-				
+
+		if (BirdEagle.getNewAnimal(name) == null) {
+			System.out.print("That's not a valid animal type: ");
+		}
+		
 		if (name.equals("eagle")) {
 			BirdEagle eagle = new BirdEagle();		
 			this.animals.add(eagle);
