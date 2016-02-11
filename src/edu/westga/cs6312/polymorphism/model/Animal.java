@@ -48,7 +48,7 @@ public abstract class Animal {
 		if (animalkind == null) {
 			throw new IllegalArgumentException("Invalid kind");
 		}
-		return animalkind;
+		return null;
 		
 	}; 
 	
