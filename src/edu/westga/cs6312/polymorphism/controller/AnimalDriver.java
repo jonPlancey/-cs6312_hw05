@@ -2,7 +2,7 @@ package edu.westga.cs6312.polymorphism.controller;
 
 
 /**
- * Homework Unit  
+ * Homework HW05  
  * @author 	cs6312
  * @author 	jim perry, jr.
  * @version	02.10.2016
