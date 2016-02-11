@@ -8,7 +8,7 @@ package edu.westga.cs6312.polymorphism.model;
  * @author 	jim perry, jr.
  * @version	02.10.2016
  */
-public class MammalCat extends Bird {
+public class MammalCat extends Mammal {
 	
 	/** 
 	 * constructor to create an BirdCrow object 
