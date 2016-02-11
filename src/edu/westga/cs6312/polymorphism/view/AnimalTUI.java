@@ -37,10 +37,9 @@ public class AnimalTUI {
 	public void run() {
 		int userchoice = 0;	
 		
-		this.displayMenu();
-		this.displayMenuInput(userchoice);		
+		this.displayMenu();		
 		
-		while (!(userchoice > 0 && userchoice < 3)) {
+		while (!(userchoice > 0 && userchoice < 2)) {
 			this.displayMenuInput(userchoice);
         }
 	}	
@@ -77,16 +76,8 @@ public class AnimalTUI {
 	/**
 	 * Decides what functions execute based on user input
 	 * @param userchoice user's menu selection
-	 * 
-	 * Precondition: userchoice > 0 && userchoice < 3  
-	 * Postcondition: user choice will be 1,2 or 3
 	 **/	
-	public void selectionCategories(int userchoice) {
-		/*
-		if (userchoice > 0 && userchoice < 3) {
-			throw new IllegalArgumentException("Invalid user selection, must be greater than 0");
-		}*/	
-		
+	public void selectionCategories(int userchoice) {		
 		switch (userchoice) {
 			case 1:	
 				System.out.println("\n    [1 Add a animal]");	   
@@ -100,12 +91,10 @@ public class AnimalTUI {
 	            break;
 	        case 3: 
 	        	System.out.println("\n    [3 Quit]");
-	        	System.out.println("    We hope you enjoyed this program.");
+	        	System.out.println("    We hope you enjoyed this program.\n\n");
 	            break;
 	        default: 
-	        	System.out.print("Not valid input. ");
-	        	this.displayMenu();
-	        	//this.displayMenuInput();
+	        	System.out.print("Not valid input. \n");
 	        	break;		
 		}	
 	}	
@@ -117,7 +106,7 @@ public class AnimalTUI {
 		String result = "";
 		
 		for (Animal currentAnimal : this.animals) {
-			result += "    " + currentAnimal.toString();
+			result += "    " + currentAnimal.toString() + "\n";
 		}	
 		System.out.println(result);
 	}
@@ -128,38 +117,12 @@ public class AnimalTUI {
 	 **/	
 	public void addAnimal() {
 		String name = "";
-/*
-		BirdEagle birdEagle = new BirdEagle();
-		BirdCrow birdCrow = new BirdCrow();
-		MammalCat mammalCat = new MammalCat();
-		MammalDog mamalDog = new MammalDog();
-	
-		String eagle = BirdEagle.getNewAnimal("eagle");
-		String crow = BirdCrow.getNewAnimal("crow");	
-		String cat = MammalCat.getNewAnimal("cat");
-		String dog = MammalDog.getNewAnimal("dog");	
-		
-		
-		while (!name.equals("eagle")) {
-			System.out.print("That's not a valid animal type: ");		
 
-        }		
-			*/
-		
 		while (name.equals("")) {
 			System.out.print("What kind of animal would you like: ");
 			name = this.userKeyboard.nextLine();
         }
-		
-		if (!name.equals("eagle") || !name.equals("crow") || !name.equals("cat") || !name.equals("dog")) {
-			System.out.print("That's not a valid animal type: ");
-		} 
-		
-		
-		
-		//String animal = BirdEagle.getNewAnimal("eagle");
-		
-		
+				
 		if (name.equals("eagle")) {
 			BirdEagle eagle = new BirdEagle();		
 			this.animals.add(eagle);
@@ -177,38 +140,10 @@ public class AnimalTUI {
 			this.animals.add(mamalDog);
 		}		
 		
-		
-
-		
-
-		
-		//Student student = new Student(firstName, lastName, grade);	
-		//this.studentRoster.addStudent(student);
 		System.out.println("\n");
 	}
 	
-
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
 	/**
 	 * provides specific text that causes input errors 
 	 * @param error accepts ERROR from try catch 
