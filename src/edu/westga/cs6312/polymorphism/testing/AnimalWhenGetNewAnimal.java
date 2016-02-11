@@ -54,9 +54,9 @@ public class AnimalWhenGetNewAnimal {
 	@Test
 	public void testAnimalWhenGetNewAnimalCat() {	
 		MammalCat cat = new MammalCat();
-		String animal = BirdEagle.getNewAnimal("eagle");
+		String animal = BirdEagle.getNewAnimal("cat");
 		
-		String expect = "Animal kind: " + animal + ", covering: feathers"; 
+		String expect = "Animal kind: " + animal + ", covering: fur"; 
 		String results = cat.toString();
 		assertEquals(expect, results);
 	}
@@ -69,9 +69,9 @@ public class AnimalWhenGetNewAnimal {
 	@Test
 	public void testAnimalWhenGetNewAnimalDog() {	
 		MammalDog dog = new MammalDog();
-		String animal = BirdEagle.getNewAnimal("eagle");
+		String animal = BirdEagle.getNewAnimal("dog");
 		
-		String expect = "Animal kind: " + animal + ", covering: feathers"; 
+		String expect = "Animal kind: " + animal + ", covering: fur"; 
 		String results = dog.toString();
 		assertEquals(expect, results);
 	}	
