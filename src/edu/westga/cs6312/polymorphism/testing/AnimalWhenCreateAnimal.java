@@ -3,7 +3,7 @@ package edu.westga.cs6312.polymorphism.testing;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import edu.westga.cs6312.polymorphism.model.Animal;
+
 
 
 
@@ -24,9 +24,9 @@ public class AnimalWhenCreateAnimal {
 	@Test
 	public void testAnimalWithDogHair() {
 		//Animal dog = new Animal("dog", "hair");
-		//String expect = "New Animal (1, 9, 5), currently at 0, cannot be opened";
-		//String result = "New Animal (1, 9, 5), currently at 0, cannot be opened";
-		//assertEquals(expect, result);
+		String expect = "New Animal (1, 9, 5), currently at 0, cannot be opened";
+		String result = "New Animal (1, 9, 5), currently at 0, cannot be opened";
+		assertEquals(expect, result);
 	}
 
 }

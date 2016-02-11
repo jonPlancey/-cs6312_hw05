@@ -60,32 +60,42 @@ public abstract class Animal {
 	}
 	
 	
+
+
 	/** 
-	 *If the String contains a kind of Animal where you don't have a
-	 * corresponding subclass, then have this method return null.
-	 * @param animalkind 		The kind of animal being created 
+	 * Returns animal to be created as an object
+	 * @param animalkind  The kind of animal being created 
 	 * @return returns an object from the corresponding Animal subclass.
 	 *  
 	 * Precondition: kind != null 
-	 * Postcondition: boolean value of true\false and return discriptive string
-	 */ 
-	public static String getNewAnimal(String animalkind) {
-		
+	 * Postcondition: Animal of whose type is kind & covered with covering
+	 */ 	
+	public static Animal getNewAnimal(String animalkind) {
 		if (animalkind == null) {
 			throw new IllegalArgumentException("Invalid kind");
 		}
-
-		return output;
-	}	
+		return animalkind;
+		
+	}; 
 	
 	
-
+	
 	
 	/** 
 	 * Gets the sound the animal makes
-	 * @return returns sound of animal
+	 * @return returns the sound of animal
 	 */ 	
-	public abstract String getSound(); 
+	public abstract String getSound();
+	
+	
+	/** 
+	 * Sets the sound of animal 
+	 * @param sound  sound animal makes 
+	 */ 	
+	public abstract void setSound(String sound); 
+	
+	
+	
 	
 	/** 
 	 * Generates string describing animal object.
@@ -96,5 +106,27 @@ public abstract class Animal {
 		String output = "Animal kind: " + this.kind  + " its's covering:  " + this.covering;		
 		return output;	
 	}
+	
+	
+	
+	
+	/** 
+	 * Gets animals kind
+	 * @return the kind of animal  
+	 */
+	public String getKind() {					
+		return this.kind;
+	}	
+
+
+	/** 
+	 * Gets animals covering
+	 * @return the covering of the animal
+	 */
+	public String getcovering() {	
+		return this.covering;
+	}
+	
+
 	
 }
