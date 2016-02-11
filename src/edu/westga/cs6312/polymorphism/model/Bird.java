@@ -26,29 +26,21 @@ public abstract class Bird extends Animal {
 
 	
 	/** 
-	 * determin how fast animal is moving
-	 * @param trueFalse 		Animal is moving fast or not.
-	 * @return string describing how fast animal moves.
+	 * determin whether bird is walking or flying
+	 * @param trueFalse Animal is walking or flying
+	 * @return bird walks on 2 les or flyss.
 	 *  
 	 * Precondition: trueFalse != null 
 	 * Postcondition: boolean value of true\false and return discriptive string
 	 */ 
 	@Override
 	public String getMovement(Boolean trueFalse) {
-		String output 	= "";
-		String ifFalse	= "I walk on two legs";
-		String ifTrue 	= "I fly";
-		
-		if (trueFalse == null) {
-			throw new IllegalArgumentException("Invalid value, expect boolean");
-		}
-
+		super.getMovement(trueFalse);		
 		if (trueFalse) {
-			output = ifTrue;
+			return "I fly";
 		} else {
-			output = ifFalse;
+			return "I walk on 2 legs";
 		}
-		return output;
 	}
 	
 }

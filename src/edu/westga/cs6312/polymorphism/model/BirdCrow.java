@@ -12,7 +12,6 @@ public class BirdCrow extends Bird {
 	
 	/** 
 	 * constructor to create an BirdCrow object 
-	 * 
 	 */ 
 	public BirdCrow() {
 		super("crow");

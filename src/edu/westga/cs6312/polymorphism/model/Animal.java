@@ -100,7 +100,7 @@ public abstract class Animal {
 	 */ 	
 	@Override
 	public String toString() {
-		String output = "Animal kind: " + this.kind  + " its's covering:  " + this.covering;		
+		String output = "Animal kind: " + this.kind  + ", covering: " + this.covering;		
 		return output;	
 	}
 	
