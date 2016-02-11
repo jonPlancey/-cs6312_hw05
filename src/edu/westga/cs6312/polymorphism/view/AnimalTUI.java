@@ -8,4 +8,12 @@ package edu.westga.cs6312.polymorphism.view;
  */
 public class AnimalTUI {
 
+	
+
+	/**
+	 * controls program flow
+	 **/
+	public void run() {	
+		
+	}
 }
