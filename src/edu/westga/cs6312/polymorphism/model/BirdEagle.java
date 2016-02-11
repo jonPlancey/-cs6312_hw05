@@ -11,7 +11,7 @@ package edu.westga.cs6312.polymorphism.model;
 public class BirdEagle extends Bird {
 	
 	/** 
-	 * constructor to create an BirdCrow object 
+	 * constructor to create an BirdEagle object 
 	 * 
 	 */ 
 	public BirdEagle() {
@@ -19,7 +19,7 @@ public class BirdEagle extends Bird {
 	}
 	
 	/** 
-	 * Gets the sound the animal makes
+	 * Gets the sound the eagle makes
 	 * @return returns the sound of animal
 	 */ 	
 
