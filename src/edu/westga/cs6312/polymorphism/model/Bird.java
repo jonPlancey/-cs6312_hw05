@@ -8,6 +8,7 @@ package edu.westga.cs6312.polymorphism.model;
  * @version	02.10.2016
  */
 public abstract class Bird extends Animal {
+	
 
 	
 	/** 

@@ -90,11 +90,6 @@ public abstract class Animal {
 	public abstract String getSound();
 	
 	
-	/** 
-	 * Sets the sound of animal 
-	 * @param sound  sound animal makes 
-	 */ 	
-	public abstract void setSound(String sound); 
 	
 	
 	

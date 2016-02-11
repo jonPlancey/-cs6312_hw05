@@ -21,16 +21,10 @@ public class BirdCrow extends Bird {
 	 * Gets the sound the animal makes
 	 * @return returns the sound of animal
 	 */ 	
-	@Override
+
 	public String getSound() {
-		return super.getSound();
+		return "caw";
 	};	
 	
-	/** 
-	 * Sets the sound of animal 
-	 * @param sound  sound animal makes 
-	 */ 	
-	public void setSound(String sound) { 	
-		return super.setSound();
-	};	
+
 }
