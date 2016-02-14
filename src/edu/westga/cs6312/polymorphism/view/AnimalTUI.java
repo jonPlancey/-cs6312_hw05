@@ -40,7 +40,12 @@ public class AnimalTUI {
 		this.displayMenu();		
 		
 		while (!(userchoice > 0 && userchoice < 1)) {
-			this.displayMenuInput(userchoice);
+			try {
+				userchoice = Integer.parseInt(this.userKeyboard.nextLine());
+			} catch (NumberFormatException error) {
+				System.out.println("Sorry: [ " + this.getErrorString(error) + " ] is not valid. Enter a number between 1 and 3. \n");
+			}
+			this.selectionCategories(userchoice);
         }
 	}	
 	
